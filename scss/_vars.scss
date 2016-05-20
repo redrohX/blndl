@@ -1,0 +1,45 @@
+// Fonts
+$f-family-1: 'Lato', sans-serif;
+$f-family-2: 'Source Sans Pro', sans-serif;
+$f-family-3: 'Alegreya Sans', sans-serif;
+$f-family-4: 'Crimson Text', serif;
+$f-family-5: 'Proxima Nova', sans-serif;
+
+// Font Sizes
+$f-size-1: 11px;
+$f-size-2: 12px;
+$f-size-3: 13px;
+$f-size-4: 14px;
+$f-size-5: 24px;
+$f-size-6: 28px;
+$f-size-7: 50px;
+$f-size-8: 64px;
+
+// Colors
+$c-mirage: #1B1F2D; // dark blue-ish
+$c-bluewood: #343C59; // more darker blue-ish
+$c-black: #000; // as black as the night
+$c-white: #fff; // whitest white
+$c-schooner: #948784; // medium gray-ish
+$c-alto: #DBDBDB; // light gray-ish
+$c-wildsand: #f4f4f4; // lighter gray
+$c-flamingo: #F64F2C; // orang-ish;
+$c-cardinal: #CE242D; // red
+
+// Default Blendle BG colors
+$c-body-bg: $c-wildsand;
+$c-article-bg: $c-white;
+
+$c-category-label-text: $c-mirage;
+$c-category-label-border: $c-bluewood;
+
+// Default Blendle Text colors
+$c-text-light: $c-schooner;
+$c-text-body: $c-black;
+
+// Publisher Text color
+$c-text-revu: $c-cardinal;
+
+// Defaults
+$d-box-shadow: 0 1px 2px 0 rgba($c-text-body, .07);
+$d-border-radius: 2px;
