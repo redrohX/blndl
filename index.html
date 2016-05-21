@@ -31,32 +31,57 @@
 
 <body>
   <div class="article-card">
-    <div class="comments-box">
-      <span class="category-label">Tech</span>
-      <ul class="comments-box-avatars">
-        <li class="comments-box-avatar-item">
-          <div class="comments-box-avatar-img-wrapper">
-            <img class="comments-box-avatar-img" src="http://placehold.it/30x30" width="30" height="30" alt="" name="">
-          </div>
-          <div class="comments-box-avatar-badge is-visible"></div>
-        </li>
-        <li class="comments-box-avatar-item">
-          <div class="comments-box-avatar-img-wrapper">
-            <img class="comments-box-avatar-img" src="http://placehold.it/30x30" width="30" height="30" alt="" name="">
-          </div>
-          <div class="comments-box-avatar-badge is-visible"></div>
-        </li>
-        <li class="comments-box-avatar-item">
-          <div class="comments-box-avatar-img-wrapper">
-            <img class="comments-box-avatar-img" src="http://placehold.it/30x30" width="30" height="30" alt="" name="">
-          </div>
-          <div class="comments-box-avatar-badge"></div>
-        </li>
-      </ul>
-      <div class="comments-box-heart-wrapper">
-        <img class="comments-box-heart" src="img/heart.svg" width="14" height="12" alt="" name="">
-        <span class="comments-box-heart-amount">69</span>
+    <div class="comments-container">
+      <div class="comments-box-avatars-container">
+        <div class="comments-box-category-label-container">
+          <span class="comments-box-category-label">Tech</span>
+        </div>
+        <ul class="comments-box-avatars">
+          <li class="comments-box-avatar-item">
+            <div class="comments-box-avatar-img-container is-active">
+              <img class="comments-box-avatar-img" src="http://placehold.it/30x30" width="30" height="30" alt="" name="">
+            </div>
+            <div class="comments-box-avatar-badge is-visible"></div>
+          </li>
+          <li class="comments-box-avatar-item">
+            <div class="comments-box-avatar-img-wrapper">
+              <img class="comments-box-avatar-img" src="http://placehold.it/30x30" width="30" height="30" alt="" name="">
+            </div>
+            <div class="comments-box-avatar-badge is-visible"></div>
+          </li>
+          <li class="comments-box-avatar-item">
+            <div class="comments-box-avatar-img-wrapper">
+              <img class="comments-box-avatar-img" src="http://placehold.it/30x30" width="30" height="30" alt="" name="">
+            </div>
+            <div class="comments-box-avatar-badge"></div>
+          </li>
+        </ul>
+        <div class="comments-box-heart-container">
+          <img class="comments-box-heart" src="img/heart.svg" width="15" height="13" alt="" name="">
+          <span class="comments-box-heart-amount">69</span>
+        </div>
       </div>
+      <div class="comments-text-container">
+        <p class="comments-text">Wat een ongelofelijk interessant artikel zeg.</p>
+        <p class="comments-text-name">Joris Bellwinkel</p>
+      </div>
+    </div>
+    <div class="article-snippet-container">
+      <header class="article-snippet-header">
+        <div class="article-snippet-logo-container">
+          <img class="article-snippet-logo" src="img/revu-logo.png" width="72" height="21" alt="" name="">
+          <div class="article-snippet-price">
+            € 0,25
+          </div>
+        </div>
+        <button class="article-snippet-more">
+          <img class="article-snippet-more-image" src="img/more.svg" width="23" height="5" alt="" name="">
+        </button>
+      </header>
+      <img class="article-snippet-photo" src="img/photos/article-small.jpg"
+        size="200vw"
+        srcset="img/photos/article-small.jpg 100w, img/photos/article-medium.jpg 200w"
+        alt="" name="">
     </div>
   </div>
   <script src="js/vendor/fontfaceobserver.js"></script>

@@ -15,10 +15,16 @@ body {
   padding: 12px 6px;
   background: $c-body-bg;
   font-family: $f-family-1;
+  font-size: $f-size-4;
 }
 
 ul, ol {
   list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+p {
   margin: 0;
   padding: 0;
 }
