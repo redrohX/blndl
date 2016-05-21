@@ -1,4 +1,5 @@
-@import  '_vars',
-          'mixins/_index',
-          'helpers/_index',
-          'core/_index';
+@import   'vendor/normalize',
+          'vars',
+          'mixins/index',
+          'helpers/index',
+          'core/index';

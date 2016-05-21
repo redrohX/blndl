@@ -1,11 +1,10 @@
 body {
   padding: 12px 6px;
-  margin: 0;
   background: $c-body-bg;
   font-family: $f-family-1;
 }
 
-.comments {
+.comments-box {
   padding: 8px;
   margin: 0 10px;
   background: $c-article-bg;
@@ -16,7 +15,6 @@ body {
 .category-label {
   display: inline-block;
   padding: 2px 4px;
-  margin: 0;
   font-size: $f-size-2;
   border-radius: $d-border-radius;
   color: $c-category-label-text;
