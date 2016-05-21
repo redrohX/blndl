@@ -1,22 +1,24 @@
+html {
+  box-sizing: border-box;
+}
+
+* {
+  box-sizing: inherit;
+
+  &:before,
+  &:after {
+    box-sizing: inherit;
+  }
+}
+
 body {
   padding: 12px 6px;
   background: $c-body-bg;
   font-family: $f-family-1;
 }
 
-.comments-box {
-  padding: 8px;
-  margin: 0 10px;
-  background: $c-article-bg;
-  border-radius: $d-border-radius;
-  box-shadow: $d-box-shadow;
-}
-
-.category-label {
-  display: inline-block;
-  padding: 2px 4px;
-  font-size: $f-size-2;
-  border-radius: $d-border-radius;
-  color: $c-category-label-text;
-  border: 1px solid $c-category-label-border;
+ul, ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }

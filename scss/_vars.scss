@@ -29,9 +29,11 @@ $c-cardinal: #CE242D; // red
 // Default Blendle BG colors
 $c-body-bg: $c-wildsand;
 $c-article-bg: $c-white;
+$c-avatar-badge: $c-flamingo;
+$c-avatar-border: $c-white;
 
 $c-category-label-text: $c-mirage;
-$c-category-label-border: $c-bluewood;
+$c-category-label-border: rgba($c-bluewood, 0.5);
 
 // Default Blendle Text colors
 $c-text-light: $c-schooner;
