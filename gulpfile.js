@@ -4,10 +4,6 @@ var sass = require('gulp-sass');
 var autoprefixer = require('gulp-autoprefixer');
 var browserSync = require('browser-sync').create();
 
-function onError(err) {
-  console.log(err);
-}
-
 // Static Server + watching scss/html files
 gulp.task('serve', ['sass'], function() {
 
