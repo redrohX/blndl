@@ -1,3 +1,6 @@
+// Media queries
+$mq-small: 690px;
+
 // Fonts
 $f-family-1: 'Lato', sans-serif;
 $f-family-2: 'Source Sans Pro', sans-serif;
@@ -23,6 +26,7 @@ $c-white: #fff; // whitest white
 $c-schooner: #948784; // medium gray-ish
 $c-alto: #DBDBDB; // light gray-ish
 $c-wildsand: #f4f4f4; // lighter gray
+$c-gallery: #EAEAEA; // more light gray...
 $c-flamingo: #F64F2C; // orang-ish;
 $c-cardinal: #CE242D; // red
 
@@ -51,6 +55,10 @@ $c-article-snippet-paragraph-overlay-1: rgba(255,255,255,0);
 $c-article-snippet-paragraph-overlay-2: rgba(255,255,255,1);
 
 $c-article-reader-bg: $c-white;
+$c-article-reader-options-border: $c-gallery;
+$c-article-reader-options-item-close-button: $c-white;
+
+$c-refund-link: $c-schooner;
 
 // Default Blendle Text colors
 $c-text-light: $c-schooner;

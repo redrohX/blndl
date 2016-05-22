@@ -22,3 +22,62 @@ body.no-scroll {
     transform: scale(1);
     transition: transform .4s, opacity .4s;
 }
+
+    .article-reader-header {
+        display: flex;
+        align-content: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+
+        @media (min-width: 690px) {
+            flex-wrap: nowrap;
+        }
+    }
+
+    .article-reader-options {
+        display: flex;
+        align-content: center;
+        width: 100%;
+        border-bottom: 1px solid $c-article-reader-options-border;
+
+        @media (min-width: 690px) {
+            width: auto;
+            border-bottom: 0;
+        }
+    }
+
+        .article-reader-options-item {
+            align-self: center;
+            padding: 13px 14px;
+
+            &:not(:last-child) {
+                border-right: 1px solid $c-article-reader-options-border;
+            }
+        }
+
+        .article-reader-options-item.refund-link {
+            margin-left: auto;
+            font-size: $f-size-3;
+            color: $c-refund-link;
+            -webkit-font-smoothing: antialiased;
+
+            @include fonts-loaded-family($f-family-1);
+        }
+
+        .refund-link-bold {
+            font-weight: 700;
+        }
+
+        .article-reader-options-item.close-button {
+            cursor: pointer;
+        }
+
+            .article-reader-options-item-close-button {
+                border: 0;
+                background: $c-article-reader-options-item-close-button;
+                cursor: pointer;
+            }
+
+    .article-reader-logo {
+        margin: auto;
+    }

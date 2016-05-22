@@ -4,6 +4,7 @@ var ARTICLES = (function(){
     var articleSnippet = document.getElementsByClassName('js-article-snippet'),
         articleReader = document.getElementsByClassName('js-article-reader'),
         moreButton = document.getElementsByClassName('js-article-snippet-more'),
+        closeButton = document.getElementsByClassName('js-close-button'),
         body = document.body,
         articleReaderClassName = articleReader.className,
         visibleClassName = 'is-visible',
@@ -20,7 +21,7 @@ var ARTICLES = (function(){
         },
 
         closeArticle: function () {
-            articleReader[0].addEventListener('click', function() {
+            closeButton[0].addEventListener('click', function() {
                 if ($B.hasClass(articleReader[0], visibleClassName)) {
                     $B.removeClass(articleReader[0], visibleClassName);
                     $B.removeClass(body, noScrollClassName);
