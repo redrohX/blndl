@@ -2,32 +2,36 @@ var ARTICLES = (function(){
     'use strict';
 
     var articleSnippet = document.getElementsByClassName('js-article-snippet'),
-    articleReader = document.getElementsByClassName('js-article-reader'),
-    articleReaderClassName = articleReader.className,
-    visibleClassName = 'is-visible',
-    moreButton = document.getElementsByClassName('js-article-snippet-more');
+        articleReader = document.getElementsByClassName('js-article-reader'),
+        moreButton = document.getElementsByClassName('js-article-snippet-more'),
+        body = document.body,
+        articleReaderClassName = articleReader.className,
+        visibleClassName = 'is-visible',
+        noScrollClassName = 'no-scroll';
 
     return {
         openArticle: function () {
             for (var i = 0, x = articleSnippet.length; i < x; i++) {
-                articleSnippet[i].onclick = function() {
-                    $B.toggleClass(articleReader[0], visibleClassName);
-                }
+                articleSnippet[i].addEventListener('click', function() {
+                    $B.addClass(articleReader[0], visibleClassName);
+                    $B.addClass(body, noScrollClassName);
+                });
             }
         },
 
         closeArticle: function () {
-            articleReader[0].onclick = function() {
+            articleReader[0].addEventListener('click', function() {
                 if ($B.hasClass(articleReader[0], visibleClassName)) {
                     $B.removeClass(articleReader[0], visibleClassName);
+                    $B.removeClass(body, noScrollClassName);
                 }
-            }
+            });
         },
 
         openMore: function () {
-            moreButton[0].onclick = function(event) {
+            moreButton[0].addEventListener('click', function(event) {
                 event.stopPropagation();
-            }
+            });
         }
     };
 })();
