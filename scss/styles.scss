@@ -1,5 +1,13 @@
-@import   'vendor/normalize',
-          'vars',
+// Reset CSS
+@import   'vendor/normalize';
+
+// Variables, mixins and helpers
+@import   'vars',
           'mixins/index',
-          'helpers/index',
-          'core/index';
+          'helpers/index';
+
+// Core styling
+@import   'core/index';
+
+// Components
+@import   "components/index";
