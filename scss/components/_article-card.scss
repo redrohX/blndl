@@ -1,67 +1,67 @@
 .article-card {
-  margin: 0 auto;
-  max-width: 600px;
+    margin: 0 auto;
+    max-width: 600px;
 }
 
-  .article-snippet-container {
+.article-snippet-container {
     padding-bottom: 20px;
     background: $c-article-bg;
     border-radius: $d-border-radius;
     box-shadow: 0 -1px 4px 0 rgba($c-black, .09);
     cursor: pointer;
-  }
+}
 
-    .article-snippet-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
+.article-snippet-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 
-    .article-snippet-logo-container {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      width: 100%;
-      padding: 5px 10px;
-    }
-
-    .article-snippet-logo {
-      margin-right: auto;
-    }
-
-    .article-snippet-price {
-      font-size: $f-size-3;
-      color: $c-article-snippet-price;
-      -webkit-font-smoothing: antialiased;
-    }
-
-    .article-snippet-more {
-      padding: 0 10px;
-      height: 44px;
-      background: $c-article-snippet-more-bg;
-      border: 0;
-      border-left: 1px solid $c-article-snippet-more-border;
-      cursor: pointer;
-
-      &:hover .article-snippet-more-image-circles,
-      &:active .article-snippet-more-image-circles {
-        fill: $c-article-snippet-more-image-hover;
-      }
-    }
-
-      .article-snippet-more-image {
-        margin-bottom: 3px;
-      }
-
-        .article-snippet-more-image-circles {
-          fill: $c-article-snippet-more-image;
-        }
-
-  .article-snippet-photo {
+.article-snippet-logo-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     width: 100%;
-  }
+    padding: 5px 10px;
+}
 
-  .article-snippet-heading {
+.article-snippet-logo {
+    margin-right: auto;
+}
+
+.article-snippet-price {
+    font-size: $f-size-3;
+    color: $c-article-snippet-price;
+    -webkit-font-smoothing: antialiased;
+}
+
+.article-snippet-more {
+    padding: 0 10px;
+    height: 44px;
+    background: $c-article-snippet-more-bg;
+    border: 0;
+    border-left: 1px solid $c-article-snippet-more-border;
+    cursor: pointer;
+
+    &:hover .article-snippet-more-image-circles,
+    &:active .article-snippet-more-image-circles {
+        fill: $c-article-snippet-more-image-hover;
+    }
+}
+
+    .article-snippet-more-image {
+        margin-bottom: 3px;
+    }
+
+    .article-snippet-more-image-circles {
+        fill: $c-article-snippet-more-image;
+    }
+
+.article-snippet-photo {
+    width: 100%;
+}
+
+.article-snippet-heading {
     padding: 15px;
     font-weight: 700;
     font-size: $f-size-5;
@@ -71,9 +71,9 @@
     -webkit-font-smoothing: antialiased;
 
     @include fonts-loaded-family($f-family-2);
-  }
+}
 
-  .article-snippet-subheading {
+.article-snippet-subheading {
     padding: 0 15px;
     font-weight: 900;
     font-size: $f-size-7;
@@ -83,9 +83,9 @@
     -webkit-font-smoothing: antialiased;
 
     @include fonts-loaded-family($f-family-2);
-  }
+}
 
-  .article-snippet-paragraph-container {
+.article-snippet-paragraph-container {
     position: relative;
     padding: 15px;
     max-height: 135px;
@@ -97,13 +97,13 @@
     -webkit-font-smoothing: antialiased;
 
     @include fonts-loaded-family($f-family-3);
-  }
+}
 
-    .article-snippet-paragraph-overlay {
-      position: absolute;
-      top: 25px;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: linear-gradient(to bottom, $c-article-snippet-paragraph-overlay-1 0%, $c-article-snippet-paragraph-overlay-2 100%);
-    }
+.article-snippet-paragraph-overlay {
+    position: absolute;
+    top: 25px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, $c-article-snippet-paragraph-overlay-1 0%, $c-article-snippet-paragraph-overlay-2 100%);
+}
