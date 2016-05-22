@@ -1,0 +1,5 @@
+@mixin fonts-loaded-family ($_family: 'sans-serif') {
+  @at-root .fonts-loaded & {
+    font-family: $_family;
+  }
+}

@@ -1,9 +1,5 @@
 <!doctype html>
-<!--#if expr="$HTTP_COOKIE=/fonts\-loaded\=true/" -->
-<html lang="nl" class="fonts-loaded">
-<!--#else -->
 <html lang="nl">
-<!--#endif -->
 <head>
   <meta charset="utf-8">
 
@@ -44,25 +40,25 @@
         <ul class="comments-box-avatars">
           <li class="comments-box-avatar-item">
             <div class="comments-box-avatar-img-container is-active">
-              <img class="comments-box-avatar-img" src="img/photos/photo-01.jpg" width="30" height="30" alt="" name="">
+              <img class="comments-box-avatar-img" src="img/photos/photo-01.jpg" width="30" height="30" alt="Profiel foto van Thomas">
             </div>
             <div class="comments-box-avatar-badge is-visible"></div>
           </li>
           <li class="comments-box-avatar-item">
             <div class="comments-box-avatar-img-wrapper">
-              <img class="comments-box-avatar-img" src="img/photos/photo-02.jpg" width="30" height="30" alt="" name="">
+              <img class="comments-box-avatar-img" src="img/photos/photo-02.jpg" width="30" height="30" alt="Profiel foto van Kim">
             </div>
             <div class="comments-box-avatar-badge is-visible"></div>
           </li>
           <li class="comments-box-avatar-item">
             <div class="comments-box-avatar-img-wrapper">
-              <img class="comments-box-avatar-img" src="img/photos/photo-03.jpg" width="30" height="30" alt="" name="">
+              <img class="comments-box-avatar-img" src="img/photos/photo-03.jpg" width="30" height="30" alt="Profiel foto van Vince">
             </div>
             <div class="comments-box-avatar-badge"></div>
           </li>
         </ul>
         <div class="comments-box-heart-container">
-          <img class="comments-box-heart" src="img/heart.svg" width="15" height="13" alt="" name="">
+          <img class="comments-box-heart" src="img/heart.svg" width="15" height="13" alt="Dit artikel is 69 keer als favoriet gemarkeerd">
           <span class="comments-box-heart-amount">69</span>
         </div>
       </div>
@@ -74,13 +70,13 @@
     <div class="article-snippet-container">
       <header class="article-snippet-header">
         <div class="article-snippet-logo-container">
-          <img class="article-snippet-logo" src="img/revu-logo.png" width="72" height="21" alt="" name="">
+          <img class="article-snippet-logo" src="img/revu-logo.png" width="72" height="21" alt="De Nieuwe Revu">
           <div class="article-snippet-price">
             € 0,25
           </div>
         </div>
         <button class="article-snippet-more">
-          <svg class="article-snippet-more-image" width="23px" height="5px" viewBox="330 20 23 5" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+          <svg role="img" aria-label="Meer opties" class="article-snippet-more-image" width="23px" height="5px" viewBox="330 20 23 5" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
               <g class="article-snippet-more-image-circles" transform="translate(330.000000, 20.000000)">
                   <circle cx="20.5" cy="2.5" r="2.5"></circle>
                   <circle cx="11.5" cy="2.5" r="2.5"></circle>
@@ -89,9 +85,9 @@
           </svg>
         </button>
       </header>
-      <img class="article-snippet-photo" src="img/photos/article-medium.jpg" alt="" name="">
-      <h2 class="article-snippet-subheading">ADE: Roadtrippen met Amsterdam's finest</h2>
-      <h1 class="article-snippet-heading">‘Komt een cowboy bij de kapper…’</h1>
+      <img class="article-snippet-photo" src="img/photos/article-medium.jpg" alt="DJ aan het werk op ADE">
+      <h1 class="article-snippet-heading">ADE: Roadtrippen met Amsterdam's finest</h1>
+      <h2 class="article-snippet-subheading">‘Komt een cowboy bij de kapper…’</h2>
       <div class="article-snippet-paragraph-container">
         <div class="article-snippet-paragraph-overlay"></div>
         <p class="article-snippet-paragraph">
@@ -108,51 +104,35 @@
 	When all fonts are loaded, we enable them by adding a class to the html element
 */
 (function(){
-	// if the class is already set, we're good.
-	if( document.documentElement.className.indexOf( "fonts-loaded" ) > -1 ){
-		return;
-	}
+  var fontObservers = [
+    new FontFaceObserver( "Lato", {
+      weight: 400
+    }),
+    new FontFaceObserver( "Source Sans Pro", {
+  		weight: 700
+  	}),
+    new FontFaceObserver( "Source Sans Pro", {
+  		weight: 900
+  	}),
+    new FontFaceObserver( "Alegreya Sans", {
+  		weight: 500
+  	}),
+    new FontFaceObserver( "Alegreya Sans", {
+  		weight: 700
+  	}),
+    new FontFaceObserver( "Alegreya Sans", {
+  		weight: 800
+  	}),
+    new FontFaceObserver( "Crimson Text", {
+  		weight: 400
+  	})
+  ];
 
-	var fontA = new FontFaceObserver( "Lato", {
-		weight: 400
-	});
+  Promise.all(fontObservers).then(function () {
+    document.documentElement.className += " fonts-loaded";
+  });
 
-	var fontB = new FontFaceObserver( "Source Sans Pro", {
-		weight: 700
-	});
-
-	var fontC = new FontFaceObserver( "Source Sans Pro", {
-		weight: 900
-	});
-
-  var fontD = new FontFaceObserver( "Alegreya Sans", {
-		weight: 500
-	});
-
-  var fontE = new FontFaceObserver( "Alegreya Sans", {
-		weight: 700
-	});
-
-  var fontF = new FontFaceObserver( "Alegreya Sans", {
-		weight: 800
-	});
-
-  var fontG = new FontFaceObserver( "Crimson Text", {
-		weight: 400
-	});
-
-	Promise.all([
-    fontA.load(),
-    fontB.load(),
-    fontC.load(),
-    fontD.load(),
-    fontE.load(),
-    fontF.load(),
-    fontG.load()
-  ]).then(function(){
-	   document.documentElement.className += " fonts-loaded";
-	});
-}( this ));
+}());
 	</script>
   <!-- <script src="js/scripts.js"></script> -->
 </body>

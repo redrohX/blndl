@@ -1,6 +1,6 @@
 .article-card {
   margin: 0 auto;
-  max-width: 922px;
+  max-width: 600px;
 }
 
   .article-snippet-container {
@@ -61,7 +61,7 @@
     width: 100%;
   }
 
-  .article-snippet-subheading {
+  .article-snippet-heading {
     padding: 15px;
     font-weight: 700;
     font-size: $f-size-5;
@@ -70,12 +70,10 @@
     color: $c-article-snippet-subheading;
     -webkit-font-smoothing: antialiased;
 
-    @at-root .fonts-loaded & {
-      font-family: $f-family-2;
-    }
+    @include fonts-loaded-family($f-family-2);
   }
 
-  .article-snippet-heading {
+  .article-snippet-subheading {
     padding: 0 15px;
     font-weight: 900;
     font-size: $f-size-7;
@@ -84,9 +82,7 @@
     color: $c-article-snippet-heading;
     -webkit-font-smoothing: antialiased;
 
-    @at-root .fonts-loaded & {
-      font-family: $f-family-2;
-    }
+    @include fonts-loaded-family($f-family-2);
   }
 
   .article-snippet-paragraph-container {
@@ -100,9 +96,7 @@
     color: $c-article-snippet-paragraph;
     -webkit-font-smoothing: antialiased;
 
-    @at-root .fonts-loaded & {
-      font-family: $f-family-3;
-    }
+    @include fonts-loaded-family($f-family-3);
   }
 
     .article-snippet-paragraph-overlay {
