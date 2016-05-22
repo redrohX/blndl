@@ -47,8 +47,10 @@ $c-article-snippet-more-border: $c-alto;
 $c-article-snippet-subheading: $c-cardinal;
 $c-article-snippet-heading: $c-black;
 $c-article-snippet-paragraph: $c-black;
-$article-snippet-paragraph-overlay-1: rgba(255,255,255,0);
-$article-snippet-paragraph-overlay-2: rgba(255,255,255,1);
+$c-article-snippet-paragraph-overlay-1: rgba(255,255,255,0);
+$c-article-snippet-paragraph-overlay-2: rgba(255,255,255,1);
+
+$c-article-reader-bg: $c-white;
 
 // Default Blendle Text colors
 $c-text-light: $c-schooner;
