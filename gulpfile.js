@@ -3,6 +3,7 @@ var sourcemaps = require('gulp-sourcemaps');
 var sass = require('gulp-sass');
 var autoprefixer = require('gulp-autoprefixer');
 var browserSync = require('browser-sync').create();
+var imagemin = require('gulp-imagemin');
 
 // Static Server + watching scss/html files
 gulp.task('serve', ['sass'], function() {
@@ -28,5 +29,11 @@ gulp.task('sass', function () {
 gulp.task('sass:watch', function () {
   gulp.watch('./scss/**/*.scss', ['sass']);
 });
+
+gulp.task('images', () =>
+	gulp.src('img/src/**/*')
+		.pipe(imagemin())
+		.pipe(gulp.dest('img/'))
+);
 
 gulp.task('default', ['serve']);
