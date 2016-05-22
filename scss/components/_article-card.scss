@@ -63,24 +63,30 @@
 
   .article-snippet-subheading {
     padding: 15px;
-    font-family: $f-family-2;
     font-weight: 700;
     font-size: $f-size-5;
     text-transform: uppercase;
     line-height: 1;
     color: $c-article-snippet-subheading;
     -webkit-font-smoothing: antialiased;
+
+    @at-root .fonts-loaded & {
+      font-family: $f-family-2;
+    }
   }
 
   .article-snippet-heading {
     padding: 0 15px;
-    font-family: $f-family-2;
     font-weight: 900;
     font-size: $f-size-7;
     text-transform: uppercase;
     line-height: 1;
     color: $c-article-snippet-heading;
     -webkit-font-smoothing: antialiased;
+
+    @at-root .fonts-loaded & {
+      font-family: $f-family-2;
+    }
   }
 
   .article-snippet-paragraph-container {
@@ -88,12 +94,15 @@
     padding: 15px;
     max-height: 135px;
     overflow: hidden;
-    font-family: $f-family-3;
     font-weight: 500;
     font-size: $f-size-5;
     line-height: 1;
     color: $c-article-snippet-paragraph;
     -webkit-font-smoothing: antialiased;
+
+    @at-root .fonts-loaded & {
+      font-family: $f-family-3;
+    }
   }
 
     .article-snippet-paragraph-overlay {

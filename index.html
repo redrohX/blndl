@@ -1,6 +1,9 @@
 <!doctype html>
-
+<!--#if expr="$HTTP_COOKIE=/fonts\-loaded\=true/" -->
+<html lang="nl" class="fonts-loaded">
+<!--#else -->
 <html lang="nl">
+<!--#endif -->
 <head>
   <meta charset="utf-8">
 
@@ -12,16 +15,18 @@
   <link rel="stylesheet" href="css/styles.css?v=1.0">
 
   <style>
-  	@import url(https://fonts.googleapis.com/css?family=Lato);
+  	@import url(https://fonts.googleapis.com/css?family=Lato:400);
     @import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:700,900);
     @import url(https://fonts.googleapis.com/css?family=Alegreya+Sans:500,700,800);
     @import url(https://fonts.googleapis.com/css?family=Crimson+Text);
-  	body {
-  		font-family: sans-serif;
-  	}
-  	.fonts-loaded body {
-  		font-family: Lato, sans-serif;
-  	}
+
+    body {
+      font-family: sans-serif;;
+    }
+
+    .fonts-loaded body {
+      font-family: 'Lato', sans-serif;
+    }
 	</style>
 
   <!--[if lt IE 9]>
@@ -99,40 +104,54 @@
   <script>
 /*
 	Fonts are loaded through @font-face rules in the CSS whenever an element references them.
-	FontFaceObserver creates a referencing element to trigger the font request, and lsisten for font load events.
-	When all 3 fonts are loaded, we enable them by adding a class to the html element
+	FontFaceObserver creates a referencing element to trigger the font request, and listen for font load events.
+	When all fonts are loaded, we enable them by adding a class to the html element
 */
-(function( w ){
+(function(){
 	// if the class is already set, we're good.
-	if( w.document.documentElement.className.indexOf( "fonts-loaded" ) > -1 ){
+	if( document.documentElement.className.indexOf( "fonts-loaded" ) > -1 ){
 		return;
 	}
-	var fontA = new w.FontFaceObserver( "Lato", {
+
+	var fontA = new FontFaceObserver( "Lato", {
 		weight: 400
 	});
-	var fontB = new w.FontFaceObserver( "Source Sans Pro", {
+
+	var fontB = new FontFaceObserver( "Source Sans Pro", {
 		weight: 700
 	});
-	var fontC = new w.FontFaceObserver( "Source Sans Pro", {
+
+	var fontC = new FontFaceObserver( "Source Sans Pro", {
 		weight: 900
 	});
-  var fontD = new w.FontFaceObserver( "Alegreya Sans", {
+
+  var fontD = new FontFaceObserver( "Alegreya Sans", {
 		weight: 500
 	});
-  var fontE = new w.FontFaceObserver( "Alegreya Sans", {
+
+  var fontE = new FontFaceObserver( "Alegreya Sans", {
 		weight: 700
 	});
-  var fontF = new w.FontFaceObserver( "Alegreya Sans", {
+
+  var fontF = new FontFaceObserver( "Alegreya Sans", {
 		weight: 800
 	});
-  var fontG = new w.FontFaceObserver( "Crimson Text", {
+
+  var fontG = new FontFaceObserver( "Crimson Text", {
 		weight: 400
 	});
-	w.Promise
-		.all([fontA.check(), fontB.check(), fontC.check(), fontD.check(), fontE.check(), fontF.check(), fontG.check()])
-		.then(function(){
-			w.document.documentElement.className += " fonts-loaded";
-		});
+
+	Promise.all([
+    fontA.load(),
+    fontB.load(),
+    fontC.load(),
+    fontD.load(),
+    fontE.load(),
+    fontF.load(),
+    fontG.load()
+  ]).then(function(){
+	   document.documentElement.className += " fonts-loaded";
+	});
 }( this ));
 	</script>
   <!-- <script src="js/scripts.js"></script> -->

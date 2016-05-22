@@ -14,8 +14,12 @@ html {
 body {
   padding: 12px 6px;
   background: $c-body-bg;
-  font-family: $f-family-1;
+  font-family: sans-serif;;
   font-size: $f-size-4;
+
+  @at-root .fonts-loaded & {
+    font-family: $f-family-1;
+  }
 }
 
 ul, ol {
