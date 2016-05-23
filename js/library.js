@@ -6,7 +6,7 @@ var $B = (function() {
     'use strict';
 
     return {
-        toggleClass: function (element, cls) {
+        toggleClass: function (element, className) {
             var classString = element.className,
             nameIndex = classString.indexOf(className);
 
@@ -18,7 +18,7 @@ var $B = (function() {
                 classString += ' ' + className;
                 classString = classString.replace(/ +/g, ' ');
             } else {
-                classString = classString.substr(0, nameIndex) + classString.substr(nameIndex+cls.length).replace(/ +/g, ' ');
+                classString = classString.substr(0, nameIndex) + classString.substr(nameIndex+className.length).replace(/ +/g, ' ');
             }
 
             element.className = classString;
