@@ -1,0 +1,31 @@
+.article-share-options {
+    display: none;
+    align-content: center;
+
+    @media (min-width: 690px) {
+        display: flex;
+    }
+}
+
+.article-share-options-item {
+    align-self: center;
+    padding: 15px;
+    min-width: 48px;
+    min-height: 44px;
+    background-size: 30%;
+    cursor: pointer;
+
+    &:first-child {
+        border-left: 1px solid $c-article-reader-options-border;
+    }
+
+    &:not(:last-child) {
+        border-right: 1px solid $c-article-reader-options-border;
+    }
+
+    @each $item in $social-networks {
+        &.share-#{$item} {
+            background: url('../img/share-#{$item}.svg') no-repeat 50% 50%;
+        }
+    }
+}

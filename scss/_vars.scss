@@ -61,6 +61,8 @@ $c-article-reader-options-border: $c-gallery;
 $c-article-reader-options-item-close-button: $c-white;
 $c-article-reader-paragraph: $c-gunblack;
 $c-article-reader-smallheading: $c-cardinal;
+$c-article-reader-logo-info: $c-schooner;
+$c-article-reader-logo-info-bg: $c-white;
 
 $c-refund-link: $c-schooner;
 
@@ -78,3 +80,6 @@ $c-text-revu: $c-cardinal;
 // Defaults
 $d-box-shadow: 0 1px 2px 0 rgba($c-text-body, .07);
 $d-border-radius: 2px;
+
+// Social networks
+$social-networks: blendle, linkedin, facebook, twitter, mail;
