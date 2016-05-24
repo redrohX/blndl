@@ -34,16 +34,6 @@ var ARTICLES = (function(){
             moreButton[0].addEventListener('click', function(event) {
                 event.stopPropagation();
             });
-        },
-
-        toggleImage: function () {
-            for (var i = 0, x = image.length; i < x; i++) {
-                image[i].addEventListener('click', function() {
-                    console.log(this);
-                    $B.toggleClass(this, visibleClassName);
-                    $B.toggleClass(articleReader[0], noScrollClassName);
-                });
-            }
         }
     };
 })();
@@ -51,4 +41,3 @@ var ARTICLES = (function(){
 ARTICLES.openArticle();
 ARTICLES.closeArticle();
 ARTICLES.openMore();
-ARTICLES.toggleImage();
