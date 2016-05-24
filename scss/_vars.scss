@@ -53,8 +53,8 @@ $c-article-snippet-more-border: $c-alto;
 $c-article-snippet-subheading: $c-cardinal;
 $c-article-snippet-heading: $c-black;
 $c-article-snippet-paragraph: $c-black;
-$c-article-snippet-paragraph-overlay-1: rgba(255,255,255,0);
-$c-article-snippet-paragraph-overlay-2: rgba(255,255,255,1);
+$c-article-snippet-paragraph-overlay-1: rgba($c-white, 0);
+$c-article-snippet-paragraph-overlay-2: rgba($c-white, 1);
 
 $c-article-reader-bg: $c-white;
 $c-article-reader-options-border: $c-gallery;
@@ -62,8 +62,11 @@ $c-article-reader-options-item-close-button: $c-white;
 $c-article-reader-paragraph: $c-gunblack;
 $c-article-reader-smallheading: $c-cardinal;
 
-
 $c-refund-link: $c-schooner;
+
+$c-lightbox-overlay-bg: rgba($c-black, 0.8);
+$c-lightbox-close-bg: $c-white;
+$c-lightbox-overlay-img-border: $c-white;
 
 // Default Blendle Text colors
 $c-text-light: $c-schooner;
