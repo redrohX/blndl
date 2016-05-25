@@ -105,7 +105,7 @@ body.no-scroll {
             display: none;
             background: url(../img/more.svg) no-repeat 50% 50%;
 
-            @media (min-width: 690px) {
+            @media (min-width: 799px) {
                 display: block;
             }
         }
@@ -132,7 +132,7 @@ body.no-scroll {
 
             @include fonts-loaded-family($f-family-1);
 
-            @media (min-width: 690px) {
+            @media (min-width: 799px) {
                 display: block;
             }
         }

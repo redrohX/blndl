@@ -3,6 +3,7 @@
     background: $c-article-bg;
     border-radius: $d-border-radius;
     box-shadow: $d-box-shadow;
+    overflow: hidden;
 }
 
 .comments-box-avatars-container {
@@ -42,6 +43,17 @@
     .comments-box-avatar-item {
         position: relative;
         margin: 0 5px 0 0;
+        opacity: 0;
+
+        @at-root .is-loaded & {
+            @for $i from 0 to 4 {
+                $j : $i / 10 * 3;
+                &:nth-child(#{$i}) {
+                    opacity: 1;
+                    transition: opacity 1s #{$j}s;
+                }
+            }
+        }
     }
 
     .comments-box-avatar-img-container {
@@ -77,6 +89,21 @@
     margin: auto 5px auto auto;
 }
 
+.comments-box-heart {
+    opacity: 0;
+
+    @at-root .is-loaded & {
+        opacity: 1;
+        animation: heartbeat .4s .3s 10 alternate;
+	    transform-origin: center;
+        transition: opacity .3s;
+    }
+}
+
+@keyframes heartbeat{
+	to { transform: scale(1.2); }
+}
+
 .comments-box-heart-amount {
     padding-left: 2px;
     font-size: $f-size-3;
@@ -89,6 +116,13 @@
 
     .comments-text {
         padding: 2px 0 0;
+
+        opacity: 0;
+
+        @at-root .is-loaded & {
+            opacity: 1;
+            transition: opacity 1s 1s;
+        }
     }
 
     .comments-text-name {
@@ -96,4 +130,11 @@
         color: $c-comments-text-name;
         font-size: $f-size-3;
         -webkit-font-smoothing: antialiased;
+
+        opacity: 0;
+
+        @at-root .is-loaded & {
+            opacity: 1;
+            transition: opacity 1s 1.5s;
+        }
     }
