@@ -9,13 +9,17 @@ var ARTICLES = (function(){
         body = document.body,
         articleReaderClassName = articleReader.className,
         visibleClassName = 'is-visible',
-        noScrollClassName = 'no-scroll';
+        noScrollClassName = 'no-scroll',
+        noDisplayClassName = 'no-display';
 
     return {
         openArticle: function () {
             for (var i = 0, x = articleSnippet.length; i < x; i++) {
                 articleSnippet[i].addEventListener('click', function() {
-                    $B.addClass(articleReader[0], visibleClassName);
+                    $B.removeClass(articleReader[0], noDisplayClassName);
+                    setTimeout(function (){
+                        $B.addClass(articleReader[0], visibleClassName);
+                    }, 200);
                     $B.addClass(body, noScrollClassName);
                 });
             }
@@ -24,6 +28,9 @@ var ARTICLES = (function(){
         closeArticle: function () {
             closeButton[0].addEventListener('click', function() {
                 if ($B.hasClass(articleReader[0], visibleClassName)) {
+                    setTimeout(function (){
+                        $B.addClass(articleReader[0], noDisplayClassName);
+                    }, 200);
                     $B.removeClass(articleReader[0], visibleClassName);
                     $B.removeClass(body, noScrollClassName);
                 }
