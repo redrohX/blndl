@@ -17,6 +17,10 @@ body {
     font-size: $f-size-4;
 }
 
+body.no-scroll {
+    overflow: hidden;
+}
+
 ul, ol {
     list-style: none;
     margin: 0;
